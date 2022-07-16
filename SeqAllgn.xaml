@@ -1,0 +1,244 @@
+﻿<Window x:Class="SequenceAllignProject.SeqAllgn"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SequenceAllignProject"
+        mc:Ignorable="d"
+        Title="SeqAllgn" 
+        Height="1000" Width="1300"
+        WindowStyle="None"
+        ResizeMode="CanResize"
+        Background="Transparent"
+        AllowsTransparency="True"
+        HorizontalAlignment="Center"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid>
+            <Border Background="#272537" CornerRadius="20" MouseDown="Border_MouseDown" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="47*"/>
+                        <ColumnDefinition Width="228*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="26*"/>
+                        <RowDefinition Height="149*"/>
+                    </Grid.RowDefinitions>
+
+                    <Image Source="Images/biology.png" Height="70" Width="80" Margin="60,15,60,15"/>
+                    <TextBlock 
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Foreground="White"
+                   FontSize="22"
+                   Margin="20,0,0,0"/>
+
+
+                    <Button Content="Cancel" 
+                            Style="{StaticResource button}" 
+                            Click="Cancel"                            
+                            FontSize="18" RenderTransformOrigin="0.512,0.871" Margin="30,681,0,16" Grid.Row="2"/>
+
+
+
+                    <TextBlock  Text="Allign Sequences" 
+                            Style="{StaticResource titleText}" 
+                            FontSize="28" Margin="261,33,0,27" Grid.Column="2"
+                            HorizontalAlignment="Left"/>
+
+                    <TextBlock  Text="Enter Query Sequence" 
+                            Style="{StaticResource titleText}" 
+                            FontSize="24" Margin="48,10,620,34"
+                            TextAlignment="Left"
+                            Grid.Row="1" 
+                            Grid.Column="1" Width="431" Grid.ColumnSpan="2"/>
+
+                    <TextBlock  Text="Enter Subject Sequence" 
+                            Style="{StaticResource titleText}" 
+                            FontSize="24" Margin="48,106,621,335"
+                            TextAlignment="Left"
+                            Grid.Row="2" 
+                            Grid.Column="1" Width="431" Grid.ColumnSpan="2"/>
+
+                    <TextBlock  Text="Result" 
+                            Style="{StaticResource titleText}" 
+                            FontSize="24" Margin="54,327,621,194"
+                            TextAlignment="Left"
+                            Grid.Row="2" 
+                            Grid.Column="1" Grid.ColumnSpan="2"/>
+
+                    <TextBlock  Text="Description (optional)" 
+                            Style="{StaticResource titleText}" 
+                            FontSize="24" Margin="54,516,621,85"
+                            TextAlignment="Left"
+                            Grid.Row="2" 
+                            Grid.Column="1" Grid.ColumnSpan="2"/>
+
+                    <ContentControl Grid.Row="1" 
+                            Grid.Column="1"
+                            Margin="10,10,10,10" Grid.ColumnSpan="2" Grid.RowSpan="2"
+                  
+                />
+
+                    <Button Content="Check DB" 
+                            Style="{StaticResource button}" 
+                            Click="Check_DB2"                            
+                            FontSize="18" 
+                            Margin="503,265,239,439" Grid.Row="2" RenderTransformOrigin="0.833,0.48" Grid.Column="2"/>
+
+
+                    <Button Content="Save result" 
+                            Style="{StaticResource button}" 
+                            Click="Add_to_db"                            
+                            FontSize="18" 
+                            Margin="39,681,891,16" Grid.Row="2" Grid.Column="1" RenderTransformOrigin="-0.619,0.221" Grid.ColumnSpan="2"/>
+
+                    <Button Content="Clear" 
+                            Style="{StaticResource button}" 
+                            Click="Clear"                            
+                            FontSize="18" 
+                            Margin="42,681,700,16" Grid.Row="2" Grid.Column="2" RenderTransformOrigin="-0.619,0.221"/>
+
+
+
+                    <Button Content="Exit" 
+                            Style="{StaticResource button}" 
+                            Click="Exit"                            
+                            FontSize="18" 
+                            Margin="709,674,33,21"
+                            Grid.Column="2" Grid.Row="2"/>
+
+                    <TextBlock  Text="" 
+                            Style="{StaticResource titleText}" 
+                            FontSize="20" Margin="39,346,0,106" Grid.Column="1" Grid.Row="2"
+                            HorizontalAlignment="Left" Width="1022" Grid.ColumnSpan="2"/>
+
+                    <Border Grid.Row="1" 
+                    CornerRadius="15" 
+                    Margin="27,62,12,742"  Grid.ColumnSpan="3" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
+                        <Border.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleX="-1.202" AngleY="-0.008"/>
+                                <RotateTransform/>
+                                <TranslateTransform X="-4.148" Y="0.087"/>
+                            </TransformGroup>
+                        </Border.RenderTransform>
+
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                <GradientStop Color="CornflowerBlue" Offset="0.0"/>
+                                <GradientStop Color="CadetBlue" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+
+                        <Button Content="Choose from DB" 
+                            Style="{StaticResource button}" 
+                            Click="Chose_from_db"                            
+                            FontSize="18"                             
+                            Margin="38,12,1053,14"
+                            RenderTransformOrigin="0.5,0.5">
+                            <Button.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleY="1"/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Button.RenderTransform>
+                        </Button>
+
+
+                    </Border>
+
+                    <Border Grid.Row="2" 
+                    CornerRadius="15" 
+                    Margin="25,148,20,515"  Grid.ColumnSpan="3" RenderTransformOrigin="0.5,0.5">
+                        <Border.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleX="-1.202"/>
+                                <RotateTransform/>
+                                <TranslateTransform X="-4.146"/>
+                            </TransformGroup>
+                        </Border.RenderTransform>
+
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                <GradientStop Color="CornflowerBlue" Offset="0.0"/>
+                                <GradientStop Color="CadetBlue" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Button Content="Choose from DB" 
+                            Style="{StaticResource button}" 
+                            Click="Add_sequence_from_database"                            
+                            FontSize="18" 
+                            Margin="30,17,1055,16"
+                            Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5">
+
+
+                            <Button.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleY="1"/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Button.RenderTransform>
+                        </Button>
+
+                    </Border>
+                    <Border Grid.Row="2" 
+                    CornerRadius="15" 
+                    Margin="30,364,18,303"  Grid.ColumnSpan="3" RenderTransformOrigin="0.5,0.5">
+                        <Border.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleX="-1.202"/>
+                                <RotateTransform/>
+                                <TranslateTransform X="-4.146"/>
+                            </TransformGroup>
+                        </Border.RenderTransform>
+
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                <GradientStop Color="CornflowerBlue" Offset="0.0"/>
+                                <GradientStop Color="CadetBlue" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Button Content="Aliign Seq" 
+                            Style="{StaticResource button}" 
+                            Click="Allign_seq"                            
+                            FontSize="18" 
+                            Margin="34,15,1042,22" RenderTransformOrigin="0.833,0.48"/>
+
+                    </Border>
+                    <TextBox x:Name="txtString" Style="{StaticResource TextBox}" Grid.Row="1" Margin="54,74,39,757" Background="Transparent" FontSize="24" BorderBrush="White" Grid.ColumnSpan="2" RenderTransformOrigin="0.493,0.231" Grid.RowSpan="2" Grid.Column="1" />
+                    <TextBox x:Name="txtString_seq" Style="{StaticResource TextBox}" Grid.Row="2" Margin="54,165,44,529" Background="Transparent"  FontSize="24" BorderBrush="White" Grid.ColumnSpan="2" RenderTransformOrigin="0.497,0.925" Grid.Column="1"/>
+                    <TextBox x:Name="txtString_Type" Style="{StaticResource TextBox}" Grid.Row="2" Margin="54,380,35,317"  FontSize="24" Grid.ColumnSpan="2" BorderBrush="Azure" Background="Transparent" Grid.Column="1" />
+                    <TextBox x:Name="txtDexcription" Style="{StaticResource TextBox}" Grid.Row="2" Margin="-168,558,33,106" Background="Transparent" FontSize="24" BorderBrush="White" Grid.ColumnSpan="3" />
+                    <Button Content="Add to DB" 
+                        Style="{StaticResource button}" 
+                        Click="add_sequence2"                            
+                        FontSize="18" 
+                        Margin="698,266,44,439" Grid.Row="2" RenderTransformOrigin="0.833,0.48" Grid.Column="2"/>
+                    <Button Content="Check DB" 
+                        Style="{StaticResource button}" 
+                        Click="Check_DB"                            
+                        FontSize="18" 
+                        Margin="503,34,239,669" Grid.Row="2" RenderTransformOrigin="0.833,0.48" Grid.Column="2"/>
+                    <Button Content="Add to DB" 
+                        Style="{StaticResource button}" 
+                        Click="add_sequence1"                            
+                        FontSize="18" 
+                        Margin="698,34,44,669" Grid.Row="2" RenderTransformOrigin="0.833,0.48" Grid.Column="2"/>
+                </Grid>
+            </Border>
+        </Grid>
+
+    </Grid>
+</Window>

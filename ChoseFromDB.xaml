@@ -1,0 +1,82 @@
+﻿<Window x:Class="SequenceAllignProject.ChoseFromDB"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SequenceAllignProject"
+        mc:Ignorable="d"
+        Title="ChoseFromDB"
+        Height="500" Width="1000"
+        WindowStyle="None"
+        ResizeMode="CanResize"
+        Background="Transparent"
+        AllowsTransparency="True"
+        HorizontalAlignment="Center"
+        WindowStartupLocation="CenterScreen"       
+        >
+    <Grid>
+        <Border Background="#272537" CornerRadius="20" MouseDown="Border_MouseDown" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Image Source="Images/biology.png" Height="70" Width="80"/>
+                <TextBlock 
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Foreground="White"
+                   FontSize="22"
+                   Margin="20 0 0 0"/>
+
+
+
+                <ContentControl Grid.Row="1" 
+                            Grid.Column="1"
+                            Margin="10"/>
+
+                <TextBox Width="250"
+                     VerticalContentAlignment="Center"
+                     HorizontalAlignment="Left"
+                     Margin="40,18,0,319"
+                    
+                     Style="{StaticResource ModernTextbox}"
+                     Grid.Column="1" Grid.Row="1"/>
+
+                <DataGrid x:Name="DataGrid1" Background="LightGray" 
+                          Grid.Column="1" Grid.Row="1"
+                          Margin="0,86,0,95"
+                          HorizontalAlignment="Center" Width="770" SelectionChanged="DataGrid1_SelectionChanged">
+                </DataGrid>
+                <Button Content="Done" 
+                            Style="{StaticResource button}" 
+                            Click="Done"
+                            FontSize="18" 
+                            Margin="300,326,330,17"
+                            Grid.Column="1" Grid.Row="1"/>
+                <Button Content="Cancel" 
+                            Style="{StaticResource button}" 
+                            Click="Cancel"
+                            FontSize="18" 
+                            Margin="10,326,20,17" Grid.Row="1"/>
+
+
+                <TextBlock  Text="" 
+                            Style="{StaticResource titleText}" 
+                            FontSize="20" Margin="0,450,0,106" Grid.Column="1" Grid.Row="1"
+                            HorizontalAlignment="Center" Width="1022"/>
+
+                <TextBox x:Name="txtString_Type" Style="{StaticResource TextBox}" Grid.Column="1" Grid.Row="1" Margin="550,29,96,632" Background="Transparent"  FontSize="18" Visibility="Hidden"/>
+
+
+
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

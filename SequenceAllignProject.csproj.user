@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="AddNewSeq.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Add_sequence_from_database.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ChoseFromDB.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MVVM\View\AboutView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MVVM\View\HomeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SeeRegisteredSequences.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SeqAllgn.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SighInWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ViewMadeAllign.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WindowGeneral.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AddNewSeq.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Add_sequence_from_database.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ChoseFromDB.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\AboutView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\HomeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SeeRegisteredSequences.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SeqAllgn.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SighInWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\ManuButtonThem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\TextBoxTheme.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ViewMadeAllign.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WindowGeneral.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

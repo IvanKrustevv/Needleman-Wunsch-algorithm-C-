@@ -1,0 +1,129 @@
+﻿<Window x:Class="SequenceAllignProject.SeeRegisteredSequences"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SequenceAllignProject"
+        mc:Ignorable="d"
+        Title="SeeRegisteredSequences" 
+        Height="800" Width="1300"
+        WindowStyle="None"
+        ResizeMode="CanResize"
+        Background="Transparent"
+        AllowsTransparency="True"
+        HorizontalAlignment="Center"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Border Background="#272537" CornerRadius="20" MouseDown="Border_MouseDown" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Image Source="Images/biology.png" Height="70" Width="80"/>
+                <TextBlock 
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Foreground="White"
+                   FontSize="22"
+                   Margin="20 0 0 0"/>
+
+                <StackPanel Grid.Row="1">
+
+                    <Button Content="Cancel" 
+                            Style="{StaticResource button}" 
+                            Click="Cancel"                            
+                            FontSize="18" 
+                            Margin="0 620 0 0"/>
+
+                </StackPanel>
+
+                <TextBlock  Text="View all registered sequences from out database" 
+                            Style="{StaticResource titleText}" 
+                            FontSize="24" Margin="107,33,86,27" Grid.Column="1"
+                            HorizontalAlignment="Center"/>
+
+                <ContentControl Grid.Row="1" 
+                            Grid.Column="1"
+                            Margin="10"/>
+
+                <TextBox Width="250" Height="50"
+                     VerticalContentAlignment="Center"
+                     HorizontalAlignment="Left"
+                     Margin="40,18,0,632"
+                    
+                     Style="{StaticResource ModernTextbox}"
+                     Grid.Column="1" Grid.Row="1"/>
+
+                <DataGrid x:Name="DataGrid1" Background="LightGray" 
+                          Grid.Column="1" Grid.Row="1"
+                          Margin="0,93,0,350"
+                          HorizontalAlignment="Center" Width="1022" SelectionChanged="DataGrid1_SelectionChanged">
+                </DataGrid>
+                <Button Content="Load" 
+                            Style="{StaticResource button}" 
+                            Click="Load_table"
+                            FontSize="18" 
+                            Margin="40,369,890,277"
+                            Grid.Column="1" Grid.Row="1"/>
+
+                <Button Content="Refresh" 
+                            Style="{StaticResource button}" 
+                            Click="Refresh_table"                            
+                            FontSize="18" 
+                            Margin="253,369,677,277"
+                            Grid.Column="1" Grid.Row="1"/>
+
+                <Button Content="Remove" 
+                            Style="{StaticResource button}" 
+                            Click="Remove_table"                            
+                            FontSize="18" 
+                            Margin="677,369,253,277"
+                            Grid.Column="1" Grid.Row="1"/>
+
+                
+                <Button Content="Aliign Seq" 
+                            Style="{StaticResource button}" 
+                            Click="Allign_seq"                            
+                            FontSize="18" 
+                            Margin="891,369,39,277"
+                            Grid.Column="1" Grid.Row="1" RenderTransformOrigin="0.833,0.48"/>
+
+                <Button Content="Insert" 
+                            Style="{StaticResource button}" 
+                            Click="Insert"                            
+                            FontSize="18" 
+                            Margin="465,369,465,277"
+                            Grid.Column="1" Grid.Row="1"/>
+                <Button Content="Exit" 
+                            Style="{StaticResource button}" 
+                            Click="Exit"                            
+                            FontSize="18" 
+                            Margin="891,620,39,26"
+                            Grid.Column="1" Grid.Row="1"/>
+                <Button Content="Copy String" 
+                            Style="{StaticResource button}" 
+                            Click="Copy_String"                            
+                            FontSize="18" 
+                            Margin="40,620,890,26"
+                            Grid.Column="1" Grid.Row="1"/>
+                <TextBlock  Text="" 
+                            Style="{StaticResource titleText}" 
+                            FontSize="20" Margin="0,450,0,106" Grid.Column="1" Grid.Row="1"
+                            HorizontalAlignment="Center" Width="1022"/>
+                <TextBox x:Name="txtString" Style="{StaticResource TextBox}" Grid.Column="1" Grid.Row="2" Margin="39,450,39,150" Background="Transparent" FontSize="18" BorderBrush="Azure"/>
+                <TextBox x:Name="txtString_seq" Style="{StaticResource TextBox}" Grid.Column="1" Grid.Row="1" Margin="39,555,39,106" Background="Transparent"  FontSize="18" BorderBrush="Azure"/>
+                <TextBox x:Name="txtString_Type" Style="{StaticResource TextBox}" Grid.Column="1" Grid.Row="1" Margin="550,29,96,632" Background="Transparent"  FontSize="18" Visibility="Hidden"/>
+                
+                
+                
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

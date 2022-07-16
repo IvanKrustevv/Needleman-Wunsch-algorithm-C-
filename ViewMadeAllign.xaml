@@ -1,0 +1,142 @@
+﻿<Window x:Class="SequenceAllignProject.ViewMadeAllign"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SequenceAllignProject"
+        mc:Ignorable="d"
+        Title="ViewMadeAllign" 
+        Height="800" Width="1300"
+        WindowStyle="None"
+        ResizeMode="CanResize"
+        Background="Transparent"
+        AllowsTransparency="True"
+        HorizontalAlignment="Center"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Border Background="#272537" CornerRadius="20" MouseDown="Border_MouseDown" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <TextBlock  Text="Sequence 1 name -" 
+                            Style="{StaticResource titleText}" 
+                            FontSize="24" Margin="0,257,0,400" 
+                            HorizontalAlignment="Left" Grid.Row="1" 
+                            Grid.Column="1" RenderTransformOrigin="0.603,7.9" Width="353"/>
+
+
+
+                <TextBlock  Text="Type - " 
+                            Style="{StaticResource titleText}" 
+                            FontSize="24" Margin="332,257,0,378" 
+                            HorizontalAlignment="Left" Grid.Row="1" 
+                            Grid.Column="1" RenderTransformOrigin="0.603,7.9" Width="672"/>
+
+                <TextBlock  Text="Sequence 2 name -" 
+                            Style="{StaticResource titleText}" 
+                            FontSize="24" Margin="185,422,0,229" 
+                            HorizontalAlignment="Left" Grid.Row="1" RenderTransformOrigin="0.603,7.9" Width="368" Grid.ColumnSpan="2"/>
+                <TextBlock  Text="Type - " 
+                            Style="{StaticResource titleText}" 
+                            FontSize="24" Margin="332,409,0,229" 
+                            HorizontalAlignment="Left" Grid.Row="1" 
+                            Grid.Column="1" RenderTransformOrigin="0.603,7.9" Width="672"/>
+                <TextBlock  Text="Result " 
+                            Style="{StaticResource titleText}" 
+                            FontSize="24" Margin="0,560,0,77" 
+                            HorizontalAlignment="Left" Grid.Row="1" RenderTransformOrigin="0.603,7.9" Width="204" Grid.Column="1"/>
+
+                <Image Source="Images/biology.png" Height="70" Width="80"/>
+                <TextBlock 
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Foreground="White"
+                   FontSize="22"
+                   Margin="20 0 0 0"/>
+
+
+                <StackPanel Grid.Row="1">
+
+                    <Button Content="Back" 
+                            Style="{StaticResource button}" 
+                            Click="Cancel"                            
+                            FontSize="18" 
+                            Margin="0 620 0 0"/>
+
+                </StackPanel>
+
+                <TextBlock  Text="Recently made alignments" 
+                            Style="{StaticResource titleText}" 
+                            FontSize="24" Margin="107,33,86,27" Grid.Column="1"
+                            HorizontalAlignment="Center"/>
+
+
+
+                <ContentControl Grid.Row="1" 
+                            Grid.Column="1"
+                            Margin="10"/>
+
+
+                <DataGrid x:Name="DataGrid1" Background="LightGray" 
+                          Grid.Column="1" Grid.Row="1"
+                          Margin="0,10,0,472"
+                          HorizontalAlignment="Center" Width="1054" SelectionChanged="DataGrid1_SelectionChanged">
+                </DataGrid>
+                <Button Content="Load" 
+                            Style="{StaticResource button}" 
+                            Click="Load_table"
+                            FontSize="18" 
+                            Margin="15,14,15,632" Grid.Row="1"/>
+
+
+                
+
+                <Button Content="Refresh" 
+                            Style="{StaticResource button}" 
+                            Click="Refresh_table"                    
+                            FontSize="18" 
+                            Margin="15,92,15,554" Grid.Row="1"/>
+                
+
+
+                <TextBlock  Text="" 
+                            Style="{StaticResource titleText}" 
+                            FontSize="20" Margin="31,596,0,91" Grid.Column="1" Grid.Row="1"
+                            HorizontalAlignment="Left" Width="1022" RenderTransformOrigin="0.5,0.5">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+                <TextBox x:Name="txtString" Style="{StaticResource TextBox}" Grid.Column="1" Grid.Row="1" Margin="31,300,31,317" Background="Transparent" FontSize="18" BorderBrush="Azure"/>
+                <TextBox x:Name="txtString_seq" Style="{StaticResource TextBox}" Grid.Column="1" Grid.Row="1" Margin="30,458,31,160" Background="Transparent"  FontSize="18" BorderBrush="Azure"/>
+                <TextBox x:Name="txtString_seq2" Style="{StaticResource TextBox}" Grid.Column="1" Grid.Row="1" Margin="22,596,39,33" Background="Transparent"  FontSize="18" BorderBrush="Azure"/>
+                <TextBox x:Name="txtString_Type" Style="{StaticResource TextBox}" Grid.Column="1" Grid.Row="1" Margin="550,29,96,632" Background="Transparent"  FontSize="18" Visibility="Hidden"/>
+                <TextBox x:Name="txtSeq1ID" Style="{StaticResource TextBox}" Grid.Column="1" Grid.Row="1" Margin="739,29,96,632" Background="Transparent"  FontSize="18" Visibility="Hidden"/>
+                <TextBox x:Name="txtSeq2ID" Style="{StaticResource TextBox}" Grid.Column="1" Grid.Row="1" Margin="739,29,96,632" Background="Transparent"  FontSize="18" Visibility="Hidden"/>
+                <TextBox x:Name="txtSeq1Name" Style="{StaticResource TextBox}" Grid.Column="1" Grid.Row="1" Margin="318,260,518,400" Background="Transparent"  FontSize="18" Visibility="Visible"/>
+                <TextBox x:Name="txtSeq1Type" Style="{StaticResource TextBox}" Grid.Column="1" Grid.Row="1" Margin="716,260,120,400" Background="Transparent"  FontSize="18" Visibility="Visible"/>
+                <TextBox x:Name="txtSeq2Name" Style="{StaticResource TextBox}" Grid.Column="1" Grid.Row="1" Margin="303,418,533,242" Background="Transparent"  FontSize="18" Visibility="Visible"/>
+                <TextBox x:Name="txtSeq2Type" Style="{StaticResource TextBox}" Grid.Column="1" Grid.Row="1" Margin="716,418,120,242" Background="Transparent"  FontSize="18" Visibility="Visible"/>
+                <TextBox x:Name="txtSeq1TBID" Style="{StaticResource TextBox}" Grid.Column="1" Grid.Row="1" Margin="716,418,120,242" Background="Transparent"  FontSize="18" Visibility="Hidden"/>
+                <TextBox x:Name="txtSeqType1TBID" Style="{StaticResource TextBox}" Grid.Column="1" Grid.Row="1" Margin="716,418,120,242" Background="Transparent"  FontSize="18" Visibility="Hidden"/>
+                <TextBox x:Name="txtSeq12BID" Style="{StaticResource TextBox}" Grid.Column="1" Grid.Row="1" Margin="716,418,120,242" Background="Transparent"  FontSize="18" Visibility="Hidden"/>
+                <TextBox x:Name="txtSeqType2TBID" Style="{StaticResource TextBox}" Grid.Column="1" Grid.Row="1" Margin="716,418,120,242" Background="Transparent"  FontSize="18" Visibility="Hidden"/>
+                <TextBox x:Name="AlignmentID" Style="{StaticResource TextBox}" Grid.Column="1" Grid.Row="1" Margin="716,418,120,242" Background="Transparent"  FontSize="18" Visibility="Hidden"/>
+
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="SequenceAllignProject.MVVM.View.AboutView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SequenceAllignProject.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             Background="#272537">
+    <Grid>
+        <Grid>
+            <StackPanel>
+                <TextBlock Text="Global alignment of two sequences &#x0a;Needleman-Wunsch Algorith! "
+                                   Foreground="white"
+                                   FontSize="26"
+                                   Margin="20,10,10,0"/>
+
+                <TextBlock Text="The Needleman–Wunsch algorithm is an algorithm used in bioinformatics to align protein or nucleotide&#x0a;sequences. It was one of the first applications of dynamic programming to compare biological sequences.&#x0a;The algorithm was developed by Saul B. Needleman and Christian D. Wunsch and published in 1970.&#x0a;The algorithm essentially divides a large problem into a series of smaller problems, and it uses the solutions &#x0a;to the smaller problems to find an optimal solution to the larger problem.&#x0a;It is also sometimes referred to as the optimal matching algorithm and the global alignment technique. &#x0a;The Needleman–Wunsch algorithm is still widely used for optimal global alignment, particularly when &#x0a;the quality of the global alignment is of the utmost importance."
+                                   Foreground="white" 
+                                   FontSize="16"
+                                   Margin="20,20,10,0"/>
+
+                <TextBlock Text="This APP implements the Needleman–Wunsch algorithm using C# using SQL as a database and WPF as a UI"
+                                   Foreground="white" 
+                                   FontSize="16"
+                                   Margin="20,30,10,0"/>
+
+                <TextBlock Text="Author:&#x0a;Иван Кръстев&#x0a;КСТ магистър - фак № 613728"
+                                   Foreground="white" 
+                                   FontSize="16"
+                                   Margin="20,30,10,0"/>
+            </StackPanel>
+           
+
+        </Grid >
+    </Grid>
+</UserControl>
